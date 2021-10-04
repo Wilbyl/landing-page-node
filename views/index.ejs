@@ -8,84 +8,25 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Landing Page</title>
 </head>
-
 <body>
-    <nav>
-        <img src="/img/logo-blue.gif" class="img-fluid gif" alt="Animação Logo Blue">
-        <ul>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#cursos">Cursos</a>
-            </li>
-            <li>
-                <a href="#inscrever">Inscreva-se</a>
-            </li>
-        </ul>
-    </nav>
 
-    <header>
-        <article>
-            <h1>Blue Edtech</h1>
-            <p>Usar a força revolucionária da tecnologia para conectar pessoas e expandir horizontes com metodologias e
-                ensino inovador. Este é o nosso propósito, e é por isso que antes de uma escola de tecnologia da
-                informação,
-                somos impulsionadores.</p>
-        </article>
+<form method="POST" action="/will">
+ <div>
+     <label form="name">nome: </label>
+     <input type="text" name="nome" placeholder="Nome " required>
+ </div>
+ <div>
+     <label form="email">email: </label>
+     <input type="email" name="email" placeholder="escreva seu email" required>
+ </div>
+ <button type ="submit"> Finalizar</button>
+</form>
+<section id="message">
+    <p>Mensagem temp</p> <span id="close">&times;</span>
+</section>
 
-        <img src="/img/banner.png" class="img-fluid gif" alt="Banner">
-    </header>
 
-    <section id="cursos">
-        <section class="card">
-            <article id="title">
-                <h2>Principais especialidades, linguagens e frameworks do curso de Hard Skills:</h2>
-                <img src="/img/cursos.png" alt="">
-            </article>
 
-            <article id="content">
-                <h3>Desenvolvimento de Software</h3>
-                <ul>
-                    <% devList.forEach(item => { %>
-                        <li><%= item %></li>
-                    <% }) %> 
-                </ul>
-                <h3>Analytics</h3>
-                <ul>
-                    <% analyticsList.forEach(item => { %>
-                        <li><%= item %></li>
-                    <% }) %> 
-                </ul>
-                
-                <a id="inscrever" href="#inscrever">Inscreva-se agora!</a>
-            </article>
-        </section>
-    </section>
-
-    <section id="inscrever">
-        <h2>Inscreva-se!</h2>
-
-        <form action="">
-            <div>
-                <label for="nome">Nome: </label>
-                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
-            </div>
-
-            <div>
-                <label for="email">E-mail: </label>
-                <input type="email" name="email" id="email" placeholder="Digite seu email" required>
-            </div>
-
-            <button type="submit">Inscrever-se</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>
-            < The future is blue /> <a href="https://blueedtech.com.br/" target="_blank"> BlueEdtech</a>
-        </p>
-    </footer>
 </body>
 
 </html>
